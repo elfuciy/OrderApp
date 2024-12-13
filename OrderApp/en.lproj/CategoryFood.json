@@ -1,0 +1,147 @@
+[
+    {
+        "categoryName": "National",
+        "image": "nationalImage",
+        "items": [
+            {
+                "itemName": "Plov", "image": "plovImage", "price": 21.0
+            },
+            {
+                "itemName": "Yarpaq Dolma", "image": "yarpaqDolmaImage", "price": 24.0
+            },
+            {
+                "itemName": "Kebab", "image": "kebabImage", "price": 22.0
+            },
+            {
+                "itemName": "Qutab", "image": "qutabImage", "price": 8.0
+            },
+            {
+                "itemName": "Dushbara", "image": "dushbaraImage", "price": 12.0
+            },
+            {
+                "itemName": "Shakarbura", "image": "shakarburaImage", "price": 5.0
+            }
+        ]
+    },
+    {
+        "categoryName": "Italian",
+        "image": "italianImage",
+        "items": [
+            {
+                "itemName": "Pizza", "image": "pizzaImage", "price": 15.0
+            },
+            {
+                "itemName": "Pasta", "image": "pastaImage", "price": 18.0
+            },
+            {
+                "itemName": "Lasagna", "image": "lasagnaImage", "price": 20.0
+            },
+            {
+                "itemName": "Risotto", "image": "risottoImage", "price": 16.0
+            },
+            {
+                "itemName": "Caprese Salad", "image": "capreseImage", "price": 12.0
+            },
+            {
+                "itemName": "Tiramisu", "image": "tiramisuImage", "price": 10.0
+                
+            }
+        ]
+    },
+    {
+        "categoryName": "Chinese",
+        "image": "chineseImage",
+        "items": [
+            {
+                "itemName": "Dimsum", "image": "dimSumImage", "price": 12.0
+            },
+            {
+                "itemName": "Noodles", "image": "noodlesImage", "price": 14.0
+            },
+            {
+                "itemName": "Kung Pao Chicken", "image": "kungPaoImage", "price": 16.0
+            },
+            {
+                "itemName": "Spring Rolls", "image": "springRollsImage", "price": 8.0
+            },
+            {
+                "itemName": "Sweet and Sour Pork", "image": "sweetSourPorkImage", "price": 18.0
+            },
+            {
+                "itemName": "Fried Rice", "image": "friedRiceImage", "price": 12.0
+            }
+        ]
+    },
+    {
+        "categoryName": "Mexican",
+        "image": "mexicanImage",
+        "items": [
+            {
+                "itemName": "Taco", "image": "tacoImage", "price": 10.0
+            },
+            {
+                "itemName": "Burrito", "image": "burritoImage", "price": 12.0
+            },
+            {
+                "itemName": "Quesadilla", "image": "quesadillaImage", "price": 11.0
+            },
+            {
+                "itemName": "Guacamole", "image": "guacamoleImage", "price": 7.0
+            },
+            {
+                "itemName": "Churros", "image": "churrosImage", "price": 8.0
+            },
+            {
+                "itemName": "Enchiladas", "image": "enchiladasImage", "price": 13.0
+            }
+        ]
+    },
+    {
+        "categoryName": "French",
+        "image": "frenchImage",
+        "items": [
+            {
+                "itemName": "Croissant", "image": "croissantImage", "price": 5.0
+            },
+            {
+                "itemName": "Baguette", "image": "baguetteImage", "price": 6.0
+            },
+            {
+                "itemName": "Ratatouille", "image": "ratatouilleImage", "price": 15.0
+            },
+            {
+                "itemName": "Crème Brûlée", "image": "cremeBruleeImage", "price": 10.0
+            },
+            {
+                "itemName": "Soufflé", "image": "souffleImage", "price": 12.0
+            },
+            {
+                "itemName": "Quiche", "image": "quicheImage", "price": 14.0
+            }
+        ]
+    },
+    {
+        "categoryName": "Japanese",
+        "image": "japaneseImage",
+        "items": [
+            {
+                "itemName": "Sushi", "image": "sushiImage", "price": 20.0
+            },
+            {
+                "itemName": "Ramen", "image": "ramenImage", "price": 18.0
+            },
+            {
+                "itemName": "Tempura", "image": "tempuraImage", "price": 15.0
+            },
+            {
+                "itemName": "Udon", "image": "udonImage", "price": 14.0
+            },
+            {
+                "itemName": "Mochi", "image": "mochiImage", "price": 6.0
+            },
+            {
+                "itemName": "Okonomiyaki", "image": "okonomiyakiImage", "price": 17.0
+            }
+        ]
+    }
+]
