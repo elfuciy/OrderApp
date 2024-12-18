@@ -31,19 +31,19 @@ class ColorConfigure {
         gradientLayer.frame = button.bounds
         
         button.layer.insertSublayer(gradientLayer, at:0)
-        button.layer.cornerRadius = 15
+        button.layer.cornerRadius = 1
         button.layer.masksToBounds = true
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.lightGray, for: .selected)
     }
     
     func setAppBackground(_ view: UIView) {
-        view.backgroundColor = .init(red: 50/255, green: 50/255, blue: 50/255, alpha: 1)
+        view.backgroundColor = .init(red: 27/255, green: 27/255, blue: 27/255, alpha: 1)
     }
     
     func setNavigationItem(_ navigationItem: UINavigationItem) {
-        navigationItem.rightBarButtonItem?.tintColor = .black
-        navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationItem.rightBarButtonItem?.tintColor = .white
+        navigationItem.leftBarButtonItem?.tintColor = .white
     }
     
     func setLabel(label: UILabel, color: UIColor, size: CGFloat) {

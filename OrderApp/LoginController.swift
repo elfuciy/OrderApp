@@ -62,6 +62,8 @@ class LoginController: UIViewController {
                 UserDefaults.standard.setValue(true, forKey: "login")
                 navigationController?.show(controller, sender: nil)
                 
+                
+                
             } else if !user.contains(where: { $0.email == loginUser.email && $0.password == loginUser.password }) {
                 let alert = UIAlertController(title: "Error", message: "No such user", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))

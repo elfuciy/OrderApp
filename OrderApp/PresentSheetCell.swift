@@ -35,5 +35,4 @@ class PresentSheetCell: UITableViewCell {
         priceLabel.text = "\(order.price ?? 0) m"
         unitLabel.text = "Units: \(order.units ?? 0)"
     }
-
 }

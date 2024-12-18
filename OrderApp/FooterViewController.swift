@@ -11,6 +11,7 @@ class FooterViewController: UITableViewHeaderFooterView {
     static let identifier = "FooterViewController"
     var fileManagerHelp = FileManagerHelp()
     var order = [Items]()
+    var callBack: (() -> Void)?
     
     lazy var totalLabel: UILabel = {
         let label = UILabel()
@@ -65,17 +66,10 @@ class FooterViewController: UITableViewHeaderFooterView {
             self.order = order
         }
         labelPrice.text = String(calculate())
-
+    
     }
     
-    func calculate() -> Double {
-        var sum: Double = 0
-        for item in order {
-            sum += (item.price ?? 0) * Double(item.units ?? 0)
-            
-        }
-        return sum
-    }
+    
     
     required init?(coder: NSCoder) {
         fatalError()
@@ -89,6 +83,14 @@ class FooterViewController: UITableViewHeaderFooterView {
             labelPrice.textColor = .red
         }
 
+    }
+    
+    func calculate() -> Double {
+        var sum: Double = 0
+        for item in order {
+            sum += (item.price ?? 0) * Double(item.units ?? 0)
+        }
+        return sum
     }
    
 }

@@ -21,7 +21,6 @@ class PresentSheet: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(FooterViewController.self, forHeaderFooterViewReuseIdentifier: "FooterViewController")
-        
         fileManagerHelp.readOrder { order in
             self.basket = order
         }
@@ -55,19 +54,23 @@ extension PresentSheet: UITableViewDelegate, UITableViewDataSource {
     
    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-          
             if basket[indexPath.row].units ?? 0 > 1 {
                 tableView.beginUpdates()
                 basket[indexPath.row].units =   basket[indexPath.row].units! - 1
+                tableView.reloadSections(IndexSet(integer: 0), with: .none)
                 tableView.reloadData()
                 tableView.endUpdates()
             } else {
                 tableView.beginUpdates()
                 basket.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.reloadSections(IndexSet(integer: 0), with: .none)
+                tableView.reloadData()
                 tableView.endUpdates()
             }
             fileManagerHelp.writeOrder(order: basket)
         }
     }
+
+   
 }
