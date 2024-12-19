@@ -340,7 +340,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PresentSheetCell" rowHeight="137" id="KFR-Di-ijb" customClass="PresentSheetCell" customModule="OrderApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PresentSheetCell" rowHeight="137" id="KFR-Di-ijb" customClass="PresentSheetCell" customModule="OrderApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KFR-Di-ijb" id="lAe-i5-Ac4">
@@ -368,14 +368,36 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-ar-KQV">
+                                                    <rect key="frame" x="322" y="23.000000000000004" width="47" height="34.333333333333343"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
+                                                    <connections>
+                                                        <action selector="plus:" destination="KFR-Di-ijb" eventType="touchUpInside" id="fUG-Ac-B4e"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6d-sa-g13">
+                                                    <rect key="frame" x="322" y="65.333333333333329" width="47" height="34.333333333333329"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system" title=""/>
+                                                    <connections>
+                                                        <action selector="minus:" destination="KFR-Di-ijb" eventType="touchUpInside" id="ZLP-Ki-FgN"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="eBQ-LB-iyB" firstAttribute="leading" secondItem="hFc-Np-GY3" secondAttribute="trailing" constant="4" id="1Ha-Zs-NbT"/>
+                                                <constraint firstItem="hoi-ar-KQV" firstAttribute="top" secondItem="lAe-i5-Ac4" secondAttribute="topMargin" constant="12" id="1fk-S8-bHi"/>
+                                                <constraint firstItem="O6d-sa-g13" firstAttribute="top" secondItem="hoi-ar-KQV" secondAttribute="bottom" constant="8" id="5WQ-1X-8jY"/>
                                                 <constraint firstItem="hFc-Np-GY3" firstAttribute="leading" secondItem="lAe-i5-Ac4" secondAttribute="leadingMargin" id="7Kk-bx-HIK"/>
                                                 <constraint firstItem="eBQ-LB-iyB" firstAttribute="top" secondItem="lAe-i5-Ac4" secondAttribute="topMargin" constant="12" id="D5n-qb-h5E"/>
                                                 <constraint firstItem="hFc-Np-GY3" firstAttribute="top" secondItem="lAe-i5-Ac4" secondAttribute="topMargin" constant="8" id="Fot-ef-YOY"/>
                                                 <constraint firstItem="WUz-dV-iC0" firstAttribute="top" secondItem="eBQ-LB-iyB" secondAttribute="bottom" constant="4" id="H3Y-UM-u6H"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="O6d-sa-g13" secondAttribute="trailing" constant="4" id="OH1-ID-2xd"/>
                                                 <constraint firstItem="V3d-Yv-IFI" firstAttribute="top" secondItem="WUz-dV-iC0" secondAttribute="bottom" constant="4" id="Q1B-tt-hr0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hoi-ar-KQV" secondAttribute="trailing" constant="4" id="cEW-Qc-Vqy"/>
                                                 <constraint firstItem="WUz-dV-iC0" firstAttribute="leading" secondItem="hFc-Np-GY3" secondAttribute="trailing" constant="4" id="hQS-yV-NTe"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hFc-Np-GY3" secondAttribute="bottom" constant="8" id="kZf-ST-zff"/>
                                                 <constraint firstItem="hFc-Np-GY3" firstAttribute="width" secondItem="lAe-i5-Ac4" secondAttribute="width" multiplier="0.254453" id="plW-i3-35i"/>
@@ -385,8 +407,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.19607841970000001" green="0.19607841970000001" blue="0.19607841970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="minus" destination="O6d-sa-g13" id="RwK-OB-5Ri"/>
                                             <outlet property="nameLabel" destination="eBQ-LB-iyB" id="7Mm-Hs-mHT"/>
                                             <outlet property="orderImage" destination="hFc-Np-GY3" id="u4f-6B-a4b"/>
+                                            <outlet property="plus" destination="hoi-ar-KQV" id="pIi-rG-tWK"/>
                                             <outlet property="priceLabel" destination="WUz-dV-iC0" id="3oX-vo-eMN"/>
                                             <outlet property="unitLabel" destination="V3d-Yv-IFI" id="xle-d7-VHB"/>
                                         </connections>
@@ -453,11 +477,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

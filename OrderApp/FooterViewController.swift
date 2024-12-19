@@ -11,7 +11,6 @@ class FooterViewController: UITableViewHeaderFooterView {
     static let identifier = "FooterViewController"
     var fileManagerHelp = FileManagerHelp()
     var order = [Items]()
-    var callBack: (() -> Void)?
     
     lazy var totalLabel: UILabel = {
         let label = UILabel()
@@ -62,10 +61,10 @@ class FooterViewController: UITableViewHeaderFooterView {
         checkoutButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         
         contentView.backgroundColor = .init(red: 30/255.0, green: 30/255.0, blue: 12/255.0, alpha: 1.0)
-        fileManagerHelp.readOrder { order in
-            self.order = order
-        }
-        labelPrice.text = String(calculate())
+//        fileManagerHelp.readOrder { order in
+//            self.order = order
+//        }
+       
     
     }
     
@@ -82,7 +81,12 @@ class FooterViewController: UITableViewHeaderFooterView {
         } else {
             labelPrice.textColor = .red
         }
-
+    }
+    
+    func getData(order: [Items]) {
+        self.order = order
+        print(order)
+        labelPrice.text = String(calculate())
     }
     
     func calculate() -> Double {

@@ -13,6 +13,10 @@ class PresentSheetCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var plus: UIButton!
+    @IBOutlet weak var minus: UIButton!
+    var callBackPlus: (() -> Void)?
+    var callBackMinus: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,4 +39,15 @@ class PresentSheetCell: UITableViewCell {
         priceLabel.text = "\(order.price ?? 0) m"
         unitLabel.text = "Units: \(order.units ?? 0)"
     }
+    
+    @IBAction func plus(_ sender: Any) {
+        callBackPlus?()
+        print("plus")
+    }
+    
+    @IBAction func minus(_ sender: Any) {
+        callBackMinus?()
+    }
+    
+    
 }
